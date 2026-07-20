@@ -1,0 +1,391 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 9 jul. 2026, 13:04:43
+    Author     : Tec
+*/
+
+/* Estilos generales */
+body {
+    background: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar mejorado */
+.navbar {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+.navbar-brand i {
+    font-size: 1.8rem;
+    margin-right: 8px;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 10px 16px !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-link i {
+    margin-right: 6px;
+    font-size: 1.1rem;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    font-weight: 600;
+    border-bottom: none;
+    padding: 16px 24px;
+}
+
+/* Dashboard Cards */
+.card-dashboard {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-dashboard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-dashboard .card-body {
+    padding: 1.8rem;
+}
+
+.card-dashboard .icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    opacity: 0.9;
+}
+
+.card-dashboard .icon-circle.bg-white-20 {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.card-dashboard .number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.card-dashboard .label {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Efecto de burbuja en las cards */
+.card-dashboard::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+
+/* Tablas */
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background: #1a1a2e;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    padding: 14px 16px;
+    border: none;
+}
+
+.table tbody td {
+    padding: 14px 16px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Badges */
+.badge {
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    letter-spacing: 0.3px;
+}
+
+.badge-activo {
+    background: #10b981;
+    color: #fff;
+}
+
+.badge-inactivo {
+    background: #6b7280;
+    color: #fff;
+}
+
+.badge-pendiente {
+    background: #f59e0b;
+    color: #fff;
+}
+
+.badge-completado {
+    background: #10b981;
+    color: #fff;
+}
+
+.badge-descontinuado {
+    background: #ef4444;
+    color: #fff;
+}
+
+/* Botones */
+.btn {
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-sm {
+    padding: 5px 12px;
+    border-radius: 8px;
+}
+
+.btn-outline-warning:hover {
+    background: #f59e0b;
+    color: #fff;
+}
+
+.btn-outline-danger:hover {
+    background: #ef4444;
+    color: #fff;
+}
+
+.btn-outline-info:hover {
+    background: #3b82f6;
+    color: #fff;
+}
+
+/* Formularios */
+.form-control, .form-select {
+    border-radius: 10px;
+    border: 2px solid #e5e7eb;
+    padding: 10px 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.9rem;
+}
+
+/* Alertas */
+.alert {
+    border-radius: 12px;
+    border: none;
+    padding: 16px 20px;
+}
+
+.alert-danger {
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+.alert-success {
+    background: #ecfdf5;
+    color: #065f46;
+}
+
+.alert-info {
+    background: #eff6ff;
+    color: #1e40af;
+}
+
+/* Hover Shadow */
+.hover-shadow {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.hover-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    background: #f8fafc !important;
+}
+
+/* Accesos rápidos */
+.quick-access-item {
+    padding: 1.5rem 1rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+    border: 2px solid transparent;
+}
+
+.quick-access-item:hover {
+    border-color: #3b82f6;
+    background: #eff6ff;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+}
+
+.quick-access-item i {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.quick-access-item .label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #374151;
+    margin-top: 4px;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #e5e7eb;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card-dashboard .number {
+        font-size: 1.8rem;
+    }
+    .card-dashboard .card-body {
+        padding: 1.2rem;
+    }
+    .quick-access-item {
+        padding: 1rem;
+    }
+    .quick-access-item i {
+        font-size: 1.8rem;
+    }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c7cd;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a0a7ae;
+}
+
+/* Animación de entrada */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Títulos de página */
+.page-title {
+    font-weight: 700;
+    color: #1a1a2e;
+    font-size: 1.8rem;
+}
+
+.page-title i {
+    margin-right: 10px;
+    color: #3b82f6;
+}
+
+/* Subtítulos de sección */
+.section-title {
+    font-weight: 600;
+    color: #374151;
+    font-size: 1.1rem;
+}
+
+/* Total en tablas */
+.table-total {
+    background: #f8fafc;
+    font-weight: 700;
+    border-top: 2px solid #e5e7eb;
+}
